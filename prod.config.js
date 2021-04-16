@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 const path = require('path')
 
@@ -25,7 +26,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'docs/assets'),
-        filename: 'script.js',
+        filename: '[name]-[hash].[ext]',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -34,5 +35,6 @@ module.exports = {
             template: './index.html',
         }),
         new VueLoaderPlugin(),
+        new WebpackAssetsManifest(),
     ],
 }
