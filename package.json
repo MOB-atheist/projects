@@ -9,6 +9,7 @@
         "babel-loader": "^8.2.2",
         "bootstrap": "^4.6.0",
         "html-webpack-plugin": "^5.3.1",
+        "human-signals": "^2.1.0",
         "pretty": "^2.0.0",
         "react-bootstrap": "^1.5.2",
         "vue": "^2.6.12",
