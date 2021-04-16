@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 const path = require('path')
@@ -13,6 +13,14 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
             },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.css$/,
+                use: ['vue-style-loader', 'css-loader'],
+            },
         ],
     },
     output: {
@@ -23,8 +31,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'MOB-atheist projects',
             filename: 'index.html',
-            template: './index.html'
+            template: './index.html',
         }),
-        new VueLoaderPlugin()    
+        new VueLoaderPlugin(),
     ],
 }

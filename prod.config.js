@@ -13,6 +13,14 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
             },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.css$/,
+                use: ['vue-style-loader', 'css-loader'],
+            },
         ],
     },
     output: {
@@ -25,6 +33,6 @@ module.exports = {
             filename: '../index.html',
             template: './index.html',
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
     ],
 }
