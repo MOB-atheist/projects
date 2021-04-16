@@ -26,7 +26,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'docs/assets'),
-        filename: '[name]-[hash].[ext]',
+        filename: '[name]-[hash].js',
     },
     plugins: [
         new HtmlWebpackPlugin({
