@@ -1,0 +1,7 @@
+$bg-img: url('./bg.jpg');
+
+body{
+    margin: 0;
+    background-image: $bg-img;
+    background-size: cover;
+}
